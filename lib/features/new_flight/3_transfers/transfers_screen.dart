@@ -76,7 +76,7 @@ class _NewFlightTransfersScreenState extends State<NewFlightTransfersScreen> {
                                 context.router.push(const AddTransferRoute()),
                           ),
                           CustomTextButton(
-                            title: 'Clear all',
+                            title: 'Clear',
                             onPressed: () => context
                                 .read<FlightBloc>()
                                 .add(ClearTransfers()),

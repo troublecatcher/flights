@@ -16,7 +16,6 @@ class FlightsAllScreen extends StatelessWidget {
     return CupertinoPageScaffold(
         navigationBar: const CupertinoNavigationBar(
           border: null,
-          backgroundColor: surfaceColor,
           previousPageTitle: 'Flights',
           middle: Text('All flights'),
         ),

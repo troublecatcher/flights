@@ -11,7 +11,7 @@ Map<int, Widget> flightStatSegmentedControlChildren(
       (entry) {
         final index = entry.key;
         final flightStat = entry.value;
-        final color = groupValue == index ? Colors.white : secondaryTextColor;
+        final color = groupValue == index ? Colors.white : secondaryColor;
         return MapEntry(
             index,
             Row(

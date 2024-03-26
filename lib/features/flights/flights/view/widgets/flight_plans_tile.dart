@@ -33,7 +33,7 @@ class FlightPlansTile extends StatelessWidget {
               Text(
                 plans(flight.plans!.length),
                 style: TextStyle(
-                  color: secondaryTextColor,
+                  color: secondaryColor,
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w500,
                 ),

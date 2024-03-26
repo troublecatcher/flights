@@ -41,7 +41,7 @@ class TravelEventTile extends StatelessWidget {
                 child: Text(
                   city!,
                   style: TextStyle(
-                    color: secondaryTextColor,
+                    color: secondaryColor,
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w500,
                   ),
@@ -54,7 +54,7 @@ class TravelEventTile extends StatelessWidget {
                     Text(
                       title!,
                       style: TextStyle(
-                        color: primaryColor,
+                        color: accentColor,
                         fontSize: 16.sp,
                         fontWeight: FontWeight.w500,
                       ),
@@ -75,7 +75,7 @@ class TravelEventTile extends StatelessWidget {
                 child: Text(
                   country!,
                   style: TextStyle(
-                    color: primaryTextColor,
+                    color: primaryColor,
                     fontSize: 40.sp,
                     fontWeight: FontWeight.w700,
                   ),

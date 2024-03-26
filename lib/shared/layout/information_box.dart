@@ -35,7 +35,7 @@ class InformationBox extends StatelessWidget {
                   title,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: primaryTextColor,
+                    color: primaryColor,
                     fontSize: 20.sp,
                     fontWeight: FontWeight.w700,
                   ),
@@ -46,7 +46,7 @@ class InformationBox extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: subtitleTextStyle ??
                       TextStyle(
-                        color: secondaryTextColor,
+                        color: secondaryColor,
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w600,
                       ),

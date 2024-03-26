@@ -50,7 +50,6 @@ class _AddPlansScreenState extends State<AddPlansScreen> {
     return CupertinoPageScaffold(
         navigationBar: CupertinoNavigationBar(
           border: null,
-          backgroundColor: surfaceColor,
           previousPageTitle: 'Flight',
           middle: Column(
             children: [
@@ -59,7 +58,7 @@ class _AddPlansScreenState extends State<AddPlansScreen> {
                 const Text(
                   'Edit plan',
                   style: TextStyle(
-                    color: secondaryTextColor,
+                    color: secondaryColor,
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
                   ),
@@ -68,7 +67,7 @@ class _AddPlansScreenState extends State<AddPlansScreen> {
                 const Text(
                   'New plan',
                   style: TextStyle(
-                    color: secondaryTextColor,
+                    color: secondaryColor,
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
                   ),

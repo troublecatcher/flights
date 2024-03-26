@@ -33,7 +33,7 @@ class FlightCard extends StatelessWidget {
               child: Text(
                 flight.departure!.city,
                 style: TextStyle(
-                  color: secondaryTextColor,
+                  color: secondaryColor,
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w600,
                 ),
@@ -43,7 +43,7 @@ class FlightCard extends StatelessWidget {
               child: Text(
                 flight.arrival!.city,
                 style: TextStyle(
-                  color: secondaryTextColor,
+                  color: secondaryColor,
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w600,
                 ),
@@ -59,7 +59,7 @@ class FlightCard extends StatelessWidget {
               child: Text(
                 flight.departure!.country,
                 style: TextStyle(
-                  color: primaryColor,
+                  color: accentColor,
                   fontSize: 24.sp,
                   fontWeight: FontWeight.w700,
                 ),
@@ -69,7 +69,7 @@ class FlightCard extends StatelessWidget {
               child: Text(
                 flight.arrival!.country,
                 style: TextStyle(
-                  color: primaryColor,
+                  color: accentColor,
                   fontSize: 24.sp,
                   fontWeight: FontWeight.w700,
                 ),
@@ -85,7 +85,7 @@ class FlightCard extends StatelessWidget {
             Text(
               timeFormatter.format(flight.departure!.dateTime),
               style: TextStyle(
-                color: primaryColor,
+                color: accentColor,
                 fontSize: 14.sp,
                 fontWeight: FontWeight.w600,
               ),
@@ -105,7 +105,7 @@ class FlightCard extends StatelessWidget {
                     ),
                   ),
                   style: TextStyle(
-                    color: primaryColor,
+                    color: accentColor,
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w600,
                   ),
@@ -115,7 +115,7 @@ class FlightCard extends StatelessWidget {
             Text(
               timeFormatter.format(flight.arrival!.dateTime),
               style: TextStyle(
-                color: primaryColor,
+                color: accentColor,
                 fontSize: 14.sp,
                 fontWeight: FontWeight.w600,
               ),

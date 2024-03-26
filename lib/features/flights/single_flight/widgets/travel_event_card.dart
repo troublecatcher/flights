@@ -42,7 +42,7 @@ class TravelEventCard extends StatelessWidget {
                 Text(
                   travelEventType.name,
                   style: TextStyle(
-                    color: primaryColor,
+                    color: accentColor,
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w500,
                   ),
@@ -70,7 +70,7 @@ class TravelEventCard extends StatelessWidget {
                       child: Text(
                         '$country, $city',
                         style: TextStyle(
-                          color: secondaryTextColor,
+                          color: secondaryColor,
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w600,
                         ),
@@ -80,7 +80,7 @@ class TravelEventCard extends StatelessWidget {
                     Text(
                       timeFormatter.format(dateTime),
                       style: TextStyle(
-                        color: primaryTextColor,
+                        color: primaryColor,
                         fontSize: 32.sp,
                         fontWeight: FontWeight.w700,
                       ),
@@ -89,7 +89,7 @@ class TravelEventCard extends StatelessWidget {
                     Text(
                       dateFormatter.format(dateTime),
                       style: TextStyle(
-                        color: secondaryTextColor,
+                        color: secondaryColor,
                         fontSize: 16.sp,
                         fontWeight: FontWeight.w600,
                       ),
@@ -98,7 +98,7 @@ class TravelEventCard extends StatelessWidget {
                     Text(
                       'Airport',
                       style: TextStyle(
-                        color: secondaryTextColor,
+                        color: secondaryColor,
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w600,
                       ),
@@ -108,7 +108,7 @@ class TravelEventCard extends StatelessWidget {
                       child: Text(
                         airport,
                         style: TextStyle(
-                          color: primaryTextColor,
+                          color: primaryColor,
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w600,
                         ),

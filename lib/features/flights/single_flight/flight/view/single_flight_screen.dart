@@ -61,7 +61,7 @@ class _SingleFlightScreenState extends State<SingleFlightScreen>
                     '${flight.departure!.country} - ${flight.arrival!.country}',
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
-                      color: secondaryTextColor,
+                      color: secondaryColor,
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
                     ),

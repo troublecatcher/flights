@@ -51,7 +51,7 @@ class _FlightStatScreenState extends State<FlightStatScreen>
             Text(
               'Statistics',
               style: TextStyle(
-                color: secondaryTextColor,
+                color: secondaryColor,
                 fontSize: 14,
                 fontWeight: FontWeight.w600,
               ),
@@ -144,8 +144,8 @@ class _FlightStatScreenState extends State<FlightStatScreen>
                                               .toList()[listIndex],
                                           style: TextStyle(
                                             color: pageIndex == 0
-                                                ? primaryTextColor
-                                                : secondaryTextColor,
+                                                ? primaryColor
+                                                : secondaryColor,
                                             fontSize: 16.sp,
                                             fontWeight: FontWeight.w600,
                                           ),
@@ -158,7 +158,7 @@ class _FlightStatScreenState extends State<FlightStatScreen>
                                   child: Text(
                                     flightStat.data.values.toList()[listIndex],
                                     style: TextStyle(
-                                      color: primaryTextColor,
+                                      color: primaryColor,
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.w700,
                                     ),
@@ -172,7 +172,7 @@ class _FlightStatScreenState extends State<FlightStatScreen>
                         separatorBuilder: (context, index) => Divider(
                           height: 0,
                           thickness: 1,
-                          color: secondaryTextColor,
+                          color: secondaryColor,
                           indent: 16.w,
                           endIndent: 16.w,
                         ),

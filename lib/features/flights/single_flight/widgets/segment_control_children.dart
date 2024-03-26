@@ -11,7 +11,7 @@ singleFlightSegmentedControlChildren(int groupValue) {
         SvgPicture.asset(
           'assets/icons/booking/suitcase.svg',
           colorFilter: ColorFilter.mode(
-            groupValue == 0 ? Colors.white : secondaryTextColor,
+            groupValue == 0 ? Colors.white : secondaryColor,
             BlendMode.srcIn,
           ),
         ),
@@ -20,7 +20,7 @@ singleFlightSegmentedControlChildren(int groupValue) {
           'Fligth',
           overflow: TextOverflow.ellipsis,
           style: TextStyle(
-            color: groupValue == 0 ? Colors.white : secondaryTextColor,
+            color: groupValue == 0 ? Colors.white : secondaryColor,
           ),
         ),
       ],
@@ -31,7 +31,7 @@ singleFlightSegmentedControlChildren(int groupValue) {
         SvgPicture.asset(
           'assets/icons/notes/notebook.svg',
           colorFilter: ColorFilter.mode(
-            groupValue == 1 ? Colors.white : secondaryTextColor,
+            groupValue == 1 ? Colors.white : secondaryColor,
             BlendMode.srcIn,
           ),
         ),
@@ -40,7 +40,7 @@ singleFlightSegmentedControlChildren(int groupValue) {
           'Plans',
           overflow: TextOverflow.ellipsis,
           style: TextStyle(
-            color: groupValue == 1 ? Colors.white : secondaryTextColor,
+            color: groupValue == 1 ? Colors.white : secondaryColor,
           ),
         ),
       ],

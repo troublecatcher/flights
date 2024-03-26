@@ -44,7 +44,7 @@ class FlightStatCard extends StatelessWidget {
                   Text(
                     title,
                     style: TextStyle(
-                      color: secondaryTextColor,
+                      color: secondaryColor,
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w600,
                     ),
@@ -52,7 +52,7 @@ class FlightStatCard extends StatelessWidget {
                   Text(
                     summary,
                     style: TextStyle(
-                      color: primaryColor,
+                      color: accentColor,
                       fontSize: 20.sp,
                       fontWeight: FontWeight.w700,
                     ),

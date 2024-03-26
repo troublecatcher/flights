@@ -57,7 +57,7 @@ class FlightsScreen extends StatelessWidget {
                                         Text(
                                           timeFormatter.format(state.dateTime),
                                           style: TextStyle(
-                                            color: primaryColor,
+                                            color: accentColor,
                                             fontSize: 40.sp,
                                             fontWeight: FontWeight.w700,
                                           ),
@@ -78,7 +78,7 @@ class FlightsScreen extends StatelessWidget {
                                             Text(
                                               'We’ll wake you up',
                                               style: TextStyle(
-                                                color: secondaryTextColor,
+                                                color: secondaryColor,
                                                 fontSize: 16.sp,
                                                 fontWeight: FontWeight.w500,
                                               ),

@@ -75,7 +75,7 @@ class OnboardingScreen extends StatelessWidget {
                     child: Text(
                       'Terms of Use',
                       style: TextStyle(
-                        color: secondaryTextColor,
+                        color: secondaryColor,
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w400,
                       ),
@@ -86,7 +86,7 @@ class OnboardingScreen extends StatelessWidget {
                   Text(
                     ' / ',
                     style: TextStyle(
-                      color: secondaryTextColor,
+                      color: secondaryColor,
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w400,
                     ),
@@ -95,7 +95,7 @@ class OnboardingScreen extends StatelessWidget {
                     child: Text(
                       'Privacy Policy',
                       style: TextStyle(
-                        color: secondaryTextColor,
+                        color: secondaryColor,
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w400,
                       ),

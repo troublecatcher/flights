@@ -71,7 +71,7 @@ class _JetlagScreenState extends State<JetlagScreen> {
                                       assetPath:
                                           'assets/icons/booking/bed_clock.svg',
                                       subtitleTextStyle: TextStyle(
-                                        color: primaryColor,
+                                        color: accentColor,
                                         fontSize: 40.sp,
                                         fontWeight: FontWeight.w700,
                                       ),

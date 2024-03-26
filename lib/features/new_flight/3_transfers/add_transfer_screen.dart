@@ -57,112 +57,118 @@ class _AddTransferScreenState extends State<AddTransferScreen> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
+        navigationBar: const CupertinoNavigationBar(
+          middle: Text('New transfer'),
+          border: null,
+        ),
         child: SafeArea(
-      child: CustomScrollView(
-        slivers: [
-          const CupertinoSliverNavigationBar(
-            largeTitle: Text('Add transfer'),
-            border: null,
-          ),
-          SliverFillRemaining(
-            hasScrollBody: false,
-            child: Column(
-              children: [
-                SectionWithTitle(
-                  title: 'Transfer',
-                  child: Column(
-                    children: [
-                      CustomTextField(
-                        iconAssetPath: 'assets/icons/booking/earth.svg',
-                        placeholder: 'Country',
-                        controller: countryController,
-                        onChanged: () =>
-                            bloc.add(UpdatedCountry(countryController.text)),
-                      ),
-                      SizedBox(height: 8.h),
-                      CustomTextField(
-                        iconAssetPath: 'assets/icons/booking/city.svg',
-                        placeholder: 'City',
-                        controller: cityController,
-                        onChanged: () =>
-                            bloc.add(UpdatedCity(cityController.text)),
-                      ),
-                      SizedBox(height: 8.h),
-                      CustomTextField(
-                        iconAssetPath: 'assets/icons/airplane/airport.svg',
-                        placeholder: 'Airport name',
-                        controller: airportController,
-                        onChanged: () =>
-                            bloc.add(UpdatedAirport(airportController.text)),
-                      ),
-                    ],
-                  ),
-                ),
-                SectionWithTitle(
-                  title: 'Arrival',
-                  child: CustomDateTimePicker(
-                    minDate:
-                        context.read<FlightBloc>().state!.departure!.dateTime,
-                    maxDate:
-                        context.read<FlightBloc>().state!.arrival!.dateTime,
-                    initDate: arrival,
-                    onSave: (updatedDateTime) {
-                      setState(() {
-                        arrival = updatedDateTime;
-                      });
-                      bloc.add(UpdatedArrivalDateTime(updatedDateTime));
-                    },
-                    mode: NativePickerMode.dateAndTime,
-                  ),
-                ),
-                SectionWithTitle(
-                  title: 'Departure',
-                  child: CustomDateTimePicker(
-                    minDate:
-                        context.read<FlightBloc>().state!.departure!.dateTime,
-                    maxDate:
-                        context.read<FlightBloc>().state!.arrival!.dateTime,
-                    initDate: departure,
-                    onSave: (updatedDateTime) {
-                      setState(() {
-                        departure = updatedDateTime;
-                      });
-                      bloc.add(UpdatedDepartureDateTime(updatedDateTime));
-                    },
-                    mode: NativePickerMode.dateAndTime,
-                  ),
-                ),
-                Section(
+          child: CustomScrollView(
+            slivers: [
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Column(
                   children: [
-                    BlocBuilder<TransferBloc, Transfer?>(
-                      builder: (context, arrivalState) {
-                        return CustomButton(
-                          title: 'Done',
-                          onPressed: () {
-                            context
-                                .read<FlightBloc>()
-                                .add(AddedTransfer(Transfer(
-                                  countryController.text,
-                                  cityController.text,
-                                  airportController.text,
-                                  arrival,
-                                  departure,
-                                )));
-                            context.router.popForced();
+                    SectionWithTitle(
+                      title: 'Transfer',
+                      child: Column(
+                        children: [
+                          CustomTextField(
+                            iconAssetPath: 'assets/icons/booking/earth.svg',
+                            placeholder: 'Country',
+                            controller: countryController,
+                            onChanged: () => bloc
+                                .add(UpdatedCountry(countryController.text)),
+                          ),
+                          SizedBox(height: 8.h),
+                          CustomTextField(
+                            iconAssetPath: 'assets/icons/booking/city.svg',
+                            placeholder: 'City',
+                            controller: cityController,
+                            onChanged: () =>
+                                bloc.add(UpdatedCity(cityController.text)),
+                          ),
+                          SizedBox(height: 8.h),
+                          CustomTextField(
+                            iconAssetPath: 'assets/icons/airplane/airport.svg',
+                            placeholder: 'Airport name',
+                            controller: airportController,
+                            onChanged: () => bloc
+                                .add(UpdatedAirport(airportController.text)),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SectionWithTitle(
+                      title: 'Arrival',
+                      child: CustomDateTimePicker(
+                        minDate: context
+                            .read<FlightBloc>()
+                            .state!
+                            .departure!
+                            .dateTime,
+                        maxDate:
+                            context.read<FlightBloc>().state!.arrival!.dateTime,
+                        initDate: arrival,
+                        onSave: (updatedDateTime) {
+                          setState(() {
+                            arrival = updatedDateTime;
+                          });
+                          bloc.add(UpdatedArrivalDateTime(updatedDateTime));
+                        },
+                        mode: NativePickerMode.dateAndTime,
+                      ),
+                    ),
+                    SectionWithTitle(
+                      title: 'Departure',
+                      child: CustomDateTimePicker(
+                        minDate: context
+                            .read<FlightBloc>()
+                            .state!
+                            .departure!
+                            .dateTime,
+                        maxDate:
+                            context.read<FlightBloc>().state!.arrival!.dateTime,
+                        initDate: departure,
+                        onSave: (updatedDateTime) {
+                          setState(() {
+                            departure = updatedDateTime;
+                          });
+                          bloc.add(UpdatedDepartureDateTime(updatedDateTime));
+                        },
+                        mode: NativePickerMode.dateAndTime,
+                      ),
+                    ),
+                    Section(
+                      children: [
+                        BlocBuilder<TransferBloc, Transfer?>(
+                          builder: (context, arrivalState) {
+                            return CustomButton(
+                              title: 'Done',
+                              onPressed: () {
+                                context
+                                    .read<FlightBloc>()
+                                    .add(AddedTransfer(Transfer(
+                                      countryController.text,
+                                      cityController.text,
+                                      airportController.text,
+                                      arrival,
+                                      departure,
+                                    )));
+                                context.router.popForced();
+                              },
+                              isActive: arrivalState!.country.isNotEmpty &&
+                                  arrivalState.city.isNotEmpty &&
+                                  arrivalState.airport.isNotEmpty,
+                            );
                           },
-                          isActive: arrivalState!.country.isNotEmpty &&
-                              arrivalState.city.isNotEmpty &&
-                              arrivalState.airport.isNotEmpty,
-                        );
-                      },
+                        ),
+                      ],
                     ),
                   ],
                 ),
-              ],
-            ),
-          )
-        ],
-      ),
-    ));
+              )
+            ],
+          ),
+        ));
   }
 }

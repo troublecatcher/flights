@@ -31,7 +31,7 @@ class SectionWithTitleAndButton extends StatelessWidget {
                 Text(
                   title,
                   style: TextStyle(
-                    color: secondaryTextColor,
+                    color: secondaryColor,
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w600,
                   ),

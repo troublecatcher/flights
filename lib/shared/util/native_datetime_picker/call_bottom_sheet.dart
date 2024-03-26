@@ -19,7 +19,7 @@ Future<dynamic> callBottomSheet(
   return showFlexibleBottomSheet(
     context: context,
     initHeight: 0.8,
-    barrierColor: secondaryTextColor,
+    barrierColor: secondaryColor,
     bottomSheetColor: Colors.white.withOpacity(0.5),
     bottomSheetBorderRadius: BorderRadius.only(
       topLeft: Radius.circular(10.r),
@@ -59,7 +59,7 @@ Future<dynamic> callBottomSheet(
                             child: Text(
                               'Save',
                               style: TextStyle(
-                                color: primaryColor,
+                                color: accentColor,
                                 fontSize: 16.sp,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -76,7 +76,7 @@ Future<dynamic> callBottomSheet(
                             color: surfaceColor,
                             child: const Icon(
                               Icons.close_rounded,
-                              color: primaryColor,
+                              color: accentColor,
                             ),
                             onPressed: () => context.router.popForced(),
                           ),
@@ -93,7 +93,7 @@ Future<dynamic> callBottomSheet(
                   child: mode != NativePickerMode.time
                       ? NativePicker(
                           mode: mode,
-                          tintColor: primaryColor,
+                          tintColor: accentColor,
                           initDate: initDate,
                           minDate: minDate,
                           maxDate: maxDate,

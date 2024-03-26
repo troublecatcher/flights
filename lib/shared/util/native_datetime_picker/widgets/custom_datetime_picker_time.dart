@@ -26,7 +26,7 @@ class CustomDateTimePickerTime extends StatelessWidget {
           Text(
             timeFormatter.format(date),
             style: TextStyle(
-              color: primaryTextColor,
+              color: primaryColor,
               fontSize: 16.sp,
               fontWeight: FontWeight.w500,
             ),

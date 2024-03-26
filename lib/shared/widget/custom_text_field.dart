@@ -51,7 +51,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         onChanged:
             widget.onChanged != null ? (value) => widget.onChanged!() : null,
         style: TextStyle(
-          color: primaryTextColor,
+          color: primaryColor,
           fontSize: 16.sp,
           fontWeight: FontWeight.w500,
         ),

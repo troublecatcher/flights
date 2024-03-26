@@ -90,7 +90,7 @@ class _EditTransferScreenState extends State<EditTransferScreen> {
                                     cubit: context.read<TransferListCubit>())),
                           ),
                           CustomTextButton(
-                            title: 'Clear all',
+                            title: 'Clear',
                             onPressed: () => bloc.flush(),
                           ),
                         ],
