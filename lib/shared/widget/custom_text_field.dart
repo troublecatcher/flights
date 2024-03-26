@@ -45,9 +45,14 @@ class _CustomTextFieldState extends State<CustomTextField> {
 
   @override
   Widget build(BuildContext context) {
+    double height = 48.h;
+    if (widget.lines != null) {
+      height += widget.lines! * 11.h;
+    }
     return SizedBox(
-      height: 48.h,
+      height: height,
       child: CupertinoTextField(
+        maxLines: widget.lines,
         onChanged:
             widget.onChanged != null ? (value) => widget.onChanged!() : null,
         style: TextStyle(

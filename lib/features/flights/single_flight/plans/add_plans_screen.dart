@@ -8,6 +8,7 @@ import 'package:flights/shared/widget/custom_button.dart';
 import 'package:flights/shared/widget/custom_text_button.dart';
 import 'package:flights/shared/widget/custom_text_field.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -94,6 +95,7 @@ class _AddPlansScreenState extends State<AddPlansScreen> {
                         placeholder: 'Description...',
                         controller: descriptionController,
                         onChanged: () => setState(() {}),
+                        lines: 4,
                       ),
                       SizedBox(height: 8.h),
                       CustomButton(
