@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flights/app/router/router.dart';
 import 'package:flights/features/flights/flights/controller/flight_list_cubit.dart';
 import 'package:flights/features/flights/flights/model/flight/flight.dart';
-import 'package:flights/features/new_flight/3_transfers/transfer_card.dart';
+import 'package:flights/shared/layout/flight_events_tile.dart';
 import 'package:flights/features/new_flight/bloc/flight/flight_bloc.dart';
 import 'package:flights/features/new_flight/bloc/flight/flight_event.dart';
 import 'package:flights/shared/layout/information_box.dart';
@@ -51,6 +51,7 @@ class _NewFlightTransfersScreenState extends State<NewFlightTransfersScreen> {
                         child: SizedBox.shrink(),
                       );
                     } else if (index <= state.transfers.length) {
+                      final transfer = state.transfers[index - 1];
                       return Dismissible(
                         onDismissed: (direction) {
                           context
@@ -58,8 +59,16 @@ class _NewFlightTransfersScreenState extends State<NewFlightTransfersScreen> {
                               .add(RemovedTransfer(index - 1));
                         },
                         key: UniqueKey(),
-                        child: TransferCard(
-                          transfer: state.transfers[index - 1],
+                        child: FlightEventsTile(
+                          countryDeparture: transfer.country,
+                          countryArrival: transfer.country,
+                          cityDeparture: transfer.city,
+                          cityArrival: transfer.city,
+                          dateTimeDeparture: transfer.departure,
+                          dateTimeArrival: transfer.arrival,
+                          airportDeparture: transfer.airport,
+                          airportArrival: transfer.airport,
+                          reversed: true,
                         ),
                       );
                     } else {

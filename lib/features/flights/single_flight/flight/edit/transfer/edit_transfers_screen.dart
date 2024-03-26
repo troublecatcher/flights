@@ -4,7 +4,7 @@ import 'package:flights/features/flights/flights/controller/flight_list_cubit.da
 import 'package:flights/features/flights/flights/model/flight/flight.dart';
 import 'package:flights/features/flights/flights/model/transfer/transfer.dart';
 import 'package:flights/features/flights/single_flight/flight/edit/transfer/transfer_list_cubit.dart';
-import 'package:flights/features/new_flight/3_transfers/transfer_card.dart';
+import 'package:flights/shared/layout/flight_events_tile.dart';
 import 'package:flights/shared/layout/information_box.dart';
 import 'package:flights/shared/layout/section.dart';
 import 'package:flights/shared/layout/section_with_title.dart';
@@ -68,11 +68,20 @@ class _EditTransferScreenState extends State<EditTransferScreen> {
                         child: SizedBox.shrink(),
                       );
                     } else if (index <= state.length) {
+                      final transfer = state[index - 1];
                       return Dismissible(
                         onDismissed: (direction) => bloc.delete(index - 1),
                         key: UniqueKey(),
-                        child: TransferCard(
-                          transfer: state[index - 1],
+                        child: FlightEventsTile(
+                          countryDeparture: transfer.country,
+                          countryArrival: transfer.country,
+                          cityDeparture: transfer.city,
+                          cityArrival: transfer.city,
+                          dateTimeDeparture: transfer.departure,
+                          dateTimeArrival: transfer.arrival,
+                          airportDeparture: transfer.airport,
+                          airportArrival: transfer.airport,
+                          reversed: true,
                         ),
                       );
                     } else {

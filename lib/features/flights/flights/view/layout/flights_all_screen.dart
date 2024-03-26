@@ -1,5 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flights/app/styling/const.dart';
 import 'package:flights/features/flights/flights/controller/flight_list_cubit.dart';
 import 'package:flights/features/flights/flights/model/flight/flight.dart';
 import 'package:flights/features/flights/flights/view/widgets/flight_card.dart';
