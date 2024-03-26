@@ -59,7 +59,7 @@ class _NewFlightTransfersScreenState extends State<NewFlightTransfersScreen> {
                               .add(RemovedTransfer(index - 1));
                         },
                         key: UniqueKey(),
-                        child: FlightEventsTile(
+                        child: TravelEventsTile(
                           countryDeparture: transfer.country,
                           countryArrival: transfer.country,
                           cityDeparture: transfer.city,

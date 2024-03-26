@@ -3,7 +3,7 @@ import 'package:flights/features/flights/flights/model/travel_event/travel_event
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class FlightEventsTile extends StatelessWidget {
+class TravelEventsTile extends StatelessWidget {
   final String countryDeparture;
   final String countryArrival;
   final String cityDeparture;
@@ -13,7 +13,7 @@ class FlightEventsTile extends StatelessWidget {
   final String airportDeparture;
   final String airportArrival;
   final bool reversed;
-  const FlightEventsTile({
+  const TravelEventsTile({
     super.key,
     required this.countryDeparture,
     required this.countryArrival,
@@ -47,6 +47,7 @@ class FlightEventsTile extends StatelessWidget {
     ];
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: reversed ? children.reversed.toList() : children,
     );
   }

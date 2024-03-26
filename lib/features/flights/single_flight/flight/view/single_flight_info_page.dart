@@ -48,7 +48,7 @@ class SingleFlightInfoPage extends StatelessWidget {
                   context: context,
                   builder: (context) => EditActionSheet(flight: flight),
                 ),
-                child: FlightEventsTile(
+                child: TravelEventsTile(
                   countryDeparture: flight.departure!.country,
                   countryArrival: flight.arrival!.country,
                   cityDeparture: flight.departure!.city,
@@ -68,7 +68,7 @@ class SingleFlightInfoPage extends StatelessWidget {
                     physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) {
                       final transfer = flight.transfers[index];
-                      return FlightEventsTile(
+                      return TravelEventsTile(
                         countryDeparture: transfer.country,
                         countryArrival: transfer.country,
                         cityDeparture: transfer.city,

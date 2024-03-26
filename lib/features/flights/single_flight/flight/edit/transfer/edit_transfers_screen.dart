@@ -72,7 +72,7 @@ class _EditTransferScreenState extends State<EditTransferScreen> {
                       return Dismissible(
                         onDismissed: (direction) => bloc.delete(index - 1),
                         key: UniqueKey(),
-                        child: FlightEventsTile(
+                        child: TravelEventsTile(
                           countryDeparture: transfer.country,
                           countryArrival: transfer.country,
                           cityDeparture: transfer.city,
